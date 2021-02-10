@@ -13,3 +13,9 @@ This is the working directory for the Passenger FPGA development
 This design is based on a Xilinx Ultrascale device on a Zybo development board
 
 This project is the FPGA system and the ultrascale SW to drive the laser for the MEMs display
+
+To build the project in version 17.4 do the following
+
+cd to the passenger_fpga directory
+
+vivado -source ./scripts/passenger_fpga_17.4.tcl
