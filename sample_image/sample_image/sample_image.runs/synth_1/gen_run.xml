@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1618367974">
+  <File Type="VDS-TIMING-PB" Name="simple_image_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="simple_image_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="simple_image_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="simple_image_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="simple_image_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="simple_image_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="simple_image_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="simple_image_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="simple_image_wrapper.tcl"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../modules/pixel_mb_mem/vlog/pixel_mb_mem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/simple_image/simple_image.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/bd/simple_image/hdl/simple_image_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="simple_image_wrapper"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <File Path="$PSRCDIR/constrs_1/new/zybo_pinout.xdc">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2017">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="simple_image_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simple_image_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simple_image_pixel_mb_mem_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simple_image_axi_gpio_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="simple_image_processing_system7_0_0"/>
+</GenRun>
